@@ -1,0 +1,15 @@
+51222afd5daab4eb730a92c7dce2ae86 *DESCRIPTION
+c12957b3acde6a768c403c83a306b9d6 *NAMESPACE
+bbec40ac21611f6a0097de3aeaf9f497 *R/CITMIC.R
+942c14d47edd8fce3365cada34b57f3b *R/GetData_CITMIC.R
+d5fd5dfa51dfd329f8127486f66ae30a *R/data.R
+e1d0ca7157804ed90c43b4ff34a97d9b *R/globals.R
+c98750d08bd1fdf9d4f4b34699755b72 *build/vignette.rds
+51f937ae8a21403cad4c637021dc07d5 *data/CITMIC_Data.rda
+0056850a2390f06cf579c36d4f34ac84 *inst/doc/CITMIC.R
+6f8cbb384ebc8f99f8a114ba86fbba4c *inst/doc/CITMIC.Rmd
+145329a5747f56eeb90416ae676139ee *inst/doc/CITMIC.html
+9f5fa1fe978bcd9ac814c98e6bcbd0bf *man/CITMIC.Rd
+08b705a6c1581e6ab508a482d7d89a4e *man/CITMIC_Data.Rd
+c838506cea6881651dafa8a27e52d2a4 *man/GetData_CITMIC.Rd
+6f8cbb384ebc8f99f8a114ba86fbba4c *vignettes/CITMIC.Rmd

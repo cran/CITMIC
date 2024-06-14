@@ -1,0 +1,47 @@
+---
+title: "CITMIC User Guide"
+author: "Xilong Zhao, Junwei Han"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+      toc: yes
+vignette: >
+  %\VignetteIndexEntry{CITMIC User Guide} 
+
+  %\VignetteEncoding{UTF-8} 
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+```{r, include = FALSE}
+library(CITMIC)
+```
+
+## Introduce
+
+This vignette illustrates how to easily use the **CITMIC package**. Here, we present a network-based computational approach, **CTMIC**, estimate cell infiltration by integrating gene transcriptomic data and individualized cell interaction network. 
+
+This network-based method major parts:
+
+- Constructing network and performing randomization. In our method, we fist constructed a Cell-GO bipartite network for each sample. The molecular function gene sets were downloaded from C5 Gene sets derived from the GO biological process ontology in the Molecular Signatures Database (MSigDB). We then defined an edge between a Cell and a GO term if they have at least a common gene, and give the weight of this edge that calculate by the Jaccard index and Gene Expression Profile(GEP). Next, we proposed to construct a Cell-Cell interaction network for each sample. The information from the Cell-GO bipartite graph was used to evaluate the extent of interaction between two Cells as the edge's weight. We consider that the extent of interaction between two Cells will be stronger when there are more GO terms they target in common and the more related they are to these GO terms. Then, we used the eigenvector centrality measure to calculate how central each Cell is in this individualized Cell-Cell interaction network. Finally, cell infiltration in the patient dataset was obtained by normalizing the centrality scores of the cells.
+
+    This package provides the `GetData_CITMIC` function to return example data set and environment variables, such as the gene expression profile and so on.
+    
+------------------------------------------------------------------------
+
+## Calculate cell infiltration.
+
+The function `CITMIC` is used to calculate the Cell infiltration(lnScore). This function requires users to input the gene expression matrix and the *damping* is the restart probability of random walk. These sample data are stored in this package.
+
+The commands are as follows: 
+
+```{r,eval=TRUE}
+# Obtain the example data
+GEP<-GetData_CITMIC("GEP")
+# Calculate the zscore
+lnScore<-CITMIC(GEP,damping=0.90)
+head(lnScore)
+```
+
+------------------------------------------------------------------------
+
+
