@@ -1,7 +1,7 @@
 #' @title GetData_CITMIC
 #' @description Get the example data
 #' @param Data  A character should be one of "GEP", "matrix_cell_go_inter", "matrix_cell_go_jaccard"
-#' @return data
+#' @return Data
 #' @export
 
 GetData_CITMIC<-function(Data){

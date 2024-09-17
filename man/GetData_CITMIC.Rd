@@ -10,7 +10,7 @@ GetData_CITMIC(Data)
 \item{Data}{A character should be one of "GEP", "matrix_cell_go_inter", "matrix_cell_go_jaccard"}
 }
 \value{
-data
+Data
 }
 \description{
 Get the example data
