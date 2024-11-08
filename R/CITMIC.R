@@ -109,6 +109,10 @@ CITMIC<-function(GEP,weighted = TRUE,base = 10,damping=0.90,cl.cores=1,cell.type
     return(rank1)
   }
   Score_rankwalk<-data.frame(row.names=rownames(result_cell[[1]]))
+
+
+
+
   for(i in names(result_cell)){
     score<-random_crosstalk(result_cell[[i]],damping)
     Score_rankwalk<-cbind(
@@ -126,7 +130,7 @@ CITMIC<-function(GEP,weighted = TRUE,base = 10,damping=0.90,cl.cores=1,cell.type
   if(is.null(cell.type)){
     lnscore<-lnscore
   }else{
-    lnscore[cell.type,]
+    lnscore<-lnscore[cell.type,]
   }
   return(lnscore)
 }

@@ -1,7 +1,7 @@
 Package: CITMIC
 Type: Package
 Title: Estimation of Cell Infiltration Based on Cell Crosstalk
-Version: 0.1.1
+Version: 0.1.2
 Maintainer: Junwei Han <hanjunwei1981@163.com>
 Authors@R: c(person(given = "Junwei", family = "Han", email = "hanjunwei1981@163.com", role  = c("aut", "cre", "cph")),
              person(given = "Xilong", family = "Zhao", role  = "aut")
@@ -12,12 +12,12 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 2.10)
 Imports: fastmatch, igraph, parallel, stats
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2024-09-16 09:46:04 UTC; 89800
+Packaged: 2024-11-08 11:12:22 UTC; 89800
 Author: Junwei Han [aut, cre, cph],
   Xilong Zhao [aut]
 Repository: CRAN
-Date/Publication: 2024-09-17 07:50:07 UTC
+Date/Publication: 2024-11-08 12:20:02 UTC

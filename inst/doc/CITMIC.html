@@ -12,7 +12,7 @@
 
 <meta name="author" content="Xilong Zhao, Junwei Han" />
 
-<meta name="date" content="2024-09-16" />
+<meta name="date" content="2024-11-08" />
 
 <title>CITMIC User Guide</title>
 
@@ -340,7 +340,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">CITMIC User Guide</h1>
 <h4 class="author">Xilong Zhao, Junwei Han</h4>
-<h4 class="date">2024-09-16</h4>
+<h4 class="date">2024-11-08</h4>
 
 
 <div id="TOC">
@@ -405,7 +405,6 @@ stored in the package.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co">#Detect the Number of CPU Cores (Select the number of cl.cores to apply to CITMIC based on detectCores())</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(parallel)</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(igraph)</span></code></pre></div>
-<pre><code>## Warning: package &#39;igraph&#39; was built under R version 4.2.3</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;igraph&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -414,14 +413,14 @@ stored in the package.</p>
 <pre><code>## The following object is masked from &#39;package:base&#39;:
 ## 
 ##     union</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">library</span>(CITMIC)</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">detectCores</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">library</span>(CITMIC)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">detectCores</span>()</span></code></pre></div>
 <pre><code>## [1] 12</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Obtain the example data</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>GEP<span class="ot">&lt;-</span><span class="fu">GetData_CITMIC</span>(<span class="st">&quot;GEP&quot;</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co"># Calculate the Cell infiltration(lnScore)</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>lnScore<span class="ot">&lt;-</span><span class="fu">CITMIC</span>(GEP,<span class="at">weighted =</span> <span class="cn">TRUE</span>,<span class="at">base =</span> <span class="dv">10</span>,<span class="at">damping=</span><span class="fl">0.90</span>,<span class="at">cl.cores=</span><span class="dv">1</span>,<span class="at">cell.type=</span><span class="cn">NULL</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="fu">head</span>(lnScore)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Obtain the example data</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>GEP<span class="ot">&lt;-</span><span class="fu">GetData_CITMIC</span>(<span class="st">&quot;GEP&quot;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co"># Calculate the Cell infiltration(lnScore)</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>lnScore<span class="ot">&lt;-</span><span class="fu">CITMIC</span>(GEP,<span class="at">weighted =</span> <span class="cn">TRUE</span>,<span class="at">base =</span> <span class="dv">10</span>,<span class="at">damping=</span><span class="fl">0.90</span>,<span class="at">cl.cores=</span><span class="dv">1</span>,<span class="at">cell.type=</span><span class="cn">NULL</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="fu">head</span>(lnScore)</span></code></pre></div>
 <pre><code>##                        TCGA.EE.A2GJ.06A TCGA.EE.A2GI.06A TCGA.WE.A8ZM.06A
 ## Activated B cell              0.4155478        0.5319714        0.1549675
 ## Activated CD4+ T cells        0.6105840        0.6376140        0.3149371
